@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let size = 100;
+        let flag = true;
+
+        document.body.style.height = "10000px"
+
+        const object = document.createElement("div");
+        document.body.appendChild(object);
+
+        object.style.width = "100%";
+        object.style.backgroundColor = "black";
+        object.style.position = "fixed";
+        object.style.left = "0";
+        object.style.top = "0";
+        object.style.height = `${size}px`
+
+        const changeHeight = () => {
+            if (flag) {
+                size += 10;
+                object.style.backgroundColor = "black"
+                const text = document.createElement("p")
+                object.appendChild(text)
+                text.textContent = "ROOOŚNIIIJ!!"
+                text.style.position = "fixed"
+                text.style.left = "50%";
+                text.style.top = "50%";
+                text.style.display = "block"
+                text.style.transform = "translate(-50%, -50%)"
+                text.style.color = "red";
+                text.style.fontSize = "50px"
+            } else {
+                size -= 15;
+                object.style.backgroundColor = "yellow"
+            }
+
+            object.style.height = `${size}px`;
+
+            if (size > window.innerHeight) {
+                flag = !flag
+            } else if (size < 0) {
+                flag = !flag
+            }
+
+        }
+
+
+        window.addEventListener("scroll", changeHeight)
+    </script>
+</body>
+
+</html>
