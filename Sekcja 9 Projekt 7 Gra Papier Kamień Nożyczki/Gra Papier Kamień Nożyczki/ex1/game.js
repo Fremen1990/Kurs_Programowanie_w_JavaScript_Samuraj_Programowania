@@ -24,5 +24,20 @@ function handSelection() {
     this.style.boxShadow = "0 0 0 6px yellow" // nadanie żółtej obramówki do miejsca kliknięcia "this"
 }
 
+function aiChoice() {
+    return hands[Math.floor(Math * random() * 3)].dataset.option;
+
+}
+
+// funkcja steruująca
+function startGame() {
+    if (!game.playerHand) {
+        return alert("wybierz dłoń!!!")
+    }
+    game.aiHand = computerChoice()
+}
+
 //3333333333333333333333333333333333333333333333333333333333
 hands.forEach(hand => hand.addEventListener("click", handSelection)); // dla tablicy "[hands]" przez metode forEach dla każdego elementu hand dodajemy add.EventListenre
+
+document.querySelector(".start").addEventListener("click", startGame)
