@@ -66,7 +66,6 @@ function startGame() {
     endGame()
 }
 
-
 document.querySelector(".start").addEventListener("click", startGame);
 
 hands.forEach(hand => hand.addEventListener("click", playerChoice))
