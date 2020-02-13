@@ -61,7 +61,6 @@ function publishResult(player, ai, result) {
         document.querySelector('[data-summary="who-win"]').style.color = "orange"
     }
 }
-
 function endGame() {
     document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = "";
     game.playerHand = "";
@@ -73,7 +72,7 @@ function startGame() {
         return alert("wybierz dłoń!!!")
     }
     game.aiHand = aiChoice()
-    console.log(game.aiHand)
+    // console.log(game.aiHand)
     const gameResult = checkResult(game.playerHand, game.aiHand)
     console.log(gameResult);
     publishResult(game.playerHand, game.aiHand, gameResult)
