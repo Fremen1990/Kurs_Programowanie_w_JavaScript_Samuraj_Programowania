@@ -18,11 +18,11 @@
 
         h1 {
             text-align: center;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         h3 {
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         .panel {
@@ -34,7 +34,7 @@
             display: inline-block;
             width: 48%;
             overflow: hidden;
-            margin: 40px auto 0;
+            margin: 10px auto 0;
             text-align: center;
         }
 
@@ -52,7 +52,7 @@
         }
 
         h2 {
-            font-size: 40px;
+            font-size: 30px;
         }
 
         .select {
@@ -63,10 +63,16 @@
         }
 
         .select img {
-            width: 200px;
+            width: 140px;
             margin: 20px;
             display: inline-block;
+            transition: 0.8s;
+            cursor: pointer;
+        }
 
+        .select img:hover {
+            width: 145px;
+            margin: 30px;
         }
 
         button {
@@ -94,35 +100,35 @@
 </head>
 
 <body>
-    <h1>GRA "PAPIER, KAMIEŃ, NOŻYCZKI"</h1>
+    <h1>GAME "PAPER, ROCK, SCISSORS"</h1>
 
     <div class="select">
 
-        <h3>Proszę, wybierz:</h3>
+        <h3>Please select your hand:</h3>
 
-        <img data-option="papier" class="first" src="papier.jpg" alt="" title="Papier">
+        <img data-option="papier" class="first" src="Paper.png" alt="" title="Papier">
 
-        <img data-option="kamień" src="kamien.jpg" alt="" title="Kamień">
+        <img data-option="kamień" src="Rock.png" alt="" title="Kamień">
 
-        <img data-option="nożyczki" src="nozyczki.jpg" alt="" title="nożyczki">
+        <img data-option="nożyczki" src="Scissors.png" alt="" title="nożyczki">
 
     </div>
 
     <button class="start">Let's play!</button>
 
     <div class="panel-left">
-        <h3>Wyniki gry</h3>
-        <p>Twój wybór: <span data-summary="your-choice"></span></p>
-        <p>Wybór komputera: <span data-summary="ai-choice"></span></p>
-        <h2>Zwycięzca gry: <span data-summary="who-win"></span></h2>
+        <h3>Game results</h3>
+        <p>Your choice: <span data-summary="your-choice"></span></p>
+        <p>Computer choice: <span data-summary="ai-choice"></span></p>
+        <h2>The winner is: <span data-summary="who-win"></span></h2>
     </div>
 
     <div class="panel-right">
-        <h3>Aktualne wyniki</h3>
-        <p class="numbers">liczba gier: <span>0</span></p>
-        <p class="wins">wygranych: <span>0</span></p>
-        <p class="losses">przegranych: <span>0</span></p>
-        <p class="draws">remisów: <span>0</span></p>
+        <h3>Summary results</h3>
+        <p class="numbers">games: <span>0</span></p>
+        <p class="wins">wins: <span>0</span></p>
+        <p class="losses">losses: <span>0</span></p>
+        <p class="draws">draws: <span>0</span></p>
     </div>
 
     <script src="game.js"></script>
