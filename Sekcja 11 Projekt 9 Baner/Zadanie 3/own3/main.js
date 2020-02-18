@@ -49,20 +49,18 @@ const changeSlide = () => {
 let indexInterval = setInterval(changeSlide, time)
 
 const keyChangeSlide = (e) => {
-    if (e.keyCode === 37 || e.keyCode === 39) {
-        clearInterval(indexInterval)
-        e.keyCode === 37 ? active-- : active++;
-        if (active === slideList.length) {
-            active = 0;
-        } else if (active < 0) {
-            active = slideList.length - 1;
-        }
-        console.log(active)
-        image.src = slideList[active].img;
-        h1.textContent = slideList[active].text;
-        changeDot()
-        indexInterval = setInterval(changeSlide, time)
+    clearInterval(indexInterval)
+    if (e.keyCode === 37 || e.keyCode === 39)
+        e.keyCode === 39 ? active++ : active--;
+    if (active < 0) {
+        active = slideList.length - 1
+    } else if (active === slideList.length) {
+        active = 0
     }
+    image.src = slideList[active].img;
+    h1.textContent = slideList[active].text;
+    changeDot()
+    indexInterval = setInterval(changeSlide, time)
 }
 
 // utwórz funkcje keyChangeSlide. Zadanie może wymagać także zmian poza funkcją.
