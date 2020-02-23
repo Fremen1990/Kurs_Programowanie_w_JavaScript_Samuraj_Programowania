@@ -29,7 +29,7 @@ const removeTask = (e) => {
 const renderList = () => {
     ul.textContent = "";
     toDoList.forEach((toDoElement, key) => {
-        toDoElement.id = key;
+        toDoElement.dataset.key = key;
         ul.appendChild(toDoElement)
     })
 }
