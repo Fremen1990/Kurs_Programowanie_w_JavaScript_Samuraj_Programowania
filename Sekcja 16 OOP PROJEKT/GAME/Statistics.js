@@ -19,7 +19,6 @@ class Statistics {
         console.log(gameResult)
         this.gameResults.push(gameResult);
     }
-
     showGameStatistics() {
         let games = this.gameResults.length
         let wins = this.gameResults.filter(result => result.win).length;
@@ -28,4 +27,4 @@ class Statistics {
         return [games, wins, losses]
     }
 }
-const stats = new Statistics()
+// const stats = new Statistics()
