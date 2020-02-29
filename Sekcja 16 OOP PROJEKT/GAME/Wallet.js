@@ -4,7 +4,7 @@ class Wallet {
         //pobieranie aktuwalnej zawartości portfela
         this.getWalletValue = () => _money;
         //Sprawdzanie czy użytkownik ma odpowiednią ilośc środków
-        this.checlCanPlay = (value) => {
+        this.checkCanPlay = (value) => {
             if (_money >= value) return true;
             return false
         }

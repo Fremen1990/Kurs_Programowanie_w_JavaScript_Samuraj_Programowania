@@ -1,6 +1,1 @@
-class Statistics {
-
-
-}
-
-const stats = new Statistics()
+const game = new Game(200)

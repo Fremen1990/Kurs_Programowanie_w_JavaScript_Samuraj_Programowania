@@ -10,7 +10,7 @@ class Draw {
         for (let i = 0; i < this.options.length; i++) { //  losowanie przy użyciu pętli for
             const index = Math.floor(Math.random() * this.options.length); // określenie indexu poprzez ranodom * ilość wyborów , index porzebny do wyboru z tablicy this.options   
             const color = this.options[index];
-            console.log(color);
+            // console.log(color);
             colors.push(color);
         }
         return colors
